@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Diwali!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://example.com/diwali-background.jpg'); /* Replace with a Diwali background image URL */
+            background-size: cover;
+            background-position: center;
+            color: #21ee21;
+        }
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: #ffd700;
+            font-size: 3em;
+        }
+        .personalized {
+            color: #ffa500;
+            font-weight: bold;
+        }
+        p {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Happy Diwali!</h1>
+        <p class="personalized">Dear <span id="name"></span>,</p>
+        <p>May the Festival of Lights bring happiness, peace, and prosperity to your life!</p>
+        <p>Wishing you a bright and joyful Diwali with your loved ones!</p>
+    </div>
+
+    <script>
+        // Retrieve the name from localStorage and display it
+        const name = localStorage.getItem("userName");
+        document.getElementById("name").innerText = name ? name : "Friend";
+    </script>
+
+</body>
+</html>
